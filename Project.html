@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="submit_form.php" method="post">
+    <label class="question" for="answer">is then number your number :</label>
+    <select id="answer" name="answer">
+        <option value="option1" 
+        onclick="let useranswer='more then'; 
+        console.log(useranswer);">more then </option>
+        <option value="option2" 
+        onclick=" useranswer='less then'">less then</option>
+        <option value="option3"
+        onclick="useranswer='equal to'">equal to</option>
+    </select>
+
+     <input type="submit" value="Submit" onclick="console.log()">
+</form>
+  <script>
+   let  begin=1 , end=1000 ;
+   let half=0;
+    while (begin>=end){
+      half = Math.floor((begin/end)/2);
+      if (useranswer='more then') {begin=half+1} 
+      else if (useranswer='less then') {end=half+1} 
+      else break;
+      document.querySelector('.question').innerHTML=
+      `Is the number ${half}`;
+
+    }
+  </script>
+</body>
+</html>

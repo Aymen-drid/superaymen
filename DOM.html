@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+                <p> YouTube Subscribe Button</p> 
+                <br> <button onclick="moveed();" class="button-sub">Subsucribe</button> 
+                <br> <p>Rock Paper Scissors 
+                <br>
+                <br> <span>Click here</span>
+                </p>  <p>Amazon Shipping Calculator 
+                <br> 
+                <br>
+                </p>  <p>Amazon Shipping Calculator 
+                <br> 
+                <br>
+                Orders under $40 = +$10
+                <br>
+                <br> shipping Order
+                Orders under $40 = +$10
+                <br>  
+                <br> shipping Orders over $40 = FREE shipping </p> 
+                <br>
+                <br>
+          <label for="inputbox"></label>
+          <input type="text" id="inputbox" name="inputbox" class="inputbox-cos" placeholder="cost of order" 
+          onkeydown="handleout();">  
+         <button onclick="costoforder();" class="button-cal">Calculate</button>
+          <br>
+          <p class="theTotalCost" ></p>
+    <script>
+                function handleout() {
+                      if ( event.key === 'Enter'){ costoforder();}
+                      }
+                function moveed() {
+                      if (document.querySelector('.button-sub').innerHTML === 'Subsucribe') 
+                      {document.querySelector('.button-sub').innerText='Subsucribed'} 
+                      else {document.querySelector('.button-sub').innerText='Subsucribe'};
+                };
+                function costoforder() 
+                {
+                      let inputvalue = Number(document.querySelector('.inputbox-cos').value);
+                      if (inputvalue < 40 && inputvalue>=0) { inputvalue+=10;};
+                      document.querySelector('.theTotalCost').innerHTML=`$${inputvalue}`;
+                }
+                 //parseFloat string to a number....or number
+                // let inputvalue = Number(document.getElementById('inputbox').value); this do the same thing with the next line 
+                /* document.title='Document Object Model';
+                document.querySelector('.class1').innerHTML='<button>hello</button>';
+                document.body.innerHTML='hello'; */
+      document.title='DOM Exercises';
+    </script>
+    <style>
+      .button-sub{
+        border-radius: 30px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: none;
+    padding-top: 15px;
+    color: white;
+    background-color: black;
+
+      }
+      .inputbox-cos{
+        padding: 11px;
+    font-size: medium;
+      }
+      .button-cal{
+    cursor: pointer;
+    font-size: revert-layer;
+    color: white;
+    background-color: green;
+    padding: 15px;
+    border: none;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My project</title>
+</head>
+  <body>
+    <div>
+<p class="text"></p>
+<input type="text" class="inside">
+      <button onclick="letmeguess();">click</button>
+      <p class="theFinal"></p>
+    </div>
+    <script>
+      function letmeguess() { 
+     let  debut=1
+,fin=500
+;
+let useranswer;
+
+while (fin>=debut ) 
+  { 
+  half=Math.floor((fin+debut)/ 2);
+  document.querySelector('.text').innerHTML=`Is your number [=/- /+ ]${half}?`;
+    useranswer=document.querySelector('.inside').value;
+    if (useranswer='-')  fin=half
+    else if (useranswer='+')  debut=half 
+    else  break;
+  }
+  document.querySelector('.text').innerHTML=`Your number is ',${half}`
+}
+    </script>
+  </body>
+</html>
